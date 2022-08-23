@@ -1,8 +1,16 @@
 ./gradlew builZip
+cd tmp
 
-#jaws s3 cp build/distributions/kafka-1.0-SNAPSHOT.zip s3://ipsy-crm-staging/kafka/connectors/libs/bfa-connectors.zip
-cd tmp/java
+unset AWS_PROFILE
+
+[[ -d "confluent" ]] || {
+  curl -O "https://packages.confluent.io/archive/7.2/confluent-7.2.1.tar.gz"
+  tar xvfz  confluent-7.2.1.tar.gz
+  mv confluent-7.2.1 confluent
+}
+
+cd java
 rm -rf lib
 unzip ../../build/distributions/kafka-1.0-SNAPSHOT.zip
 cd ..
-~/confluent/bin/connect-standalone ./etc/connect-avro-standalone.properties ./etc/kinesis-source.properties
+./confluent/bin/connect-standalone ./etc/connect-avro-standalone.properties ./etc/kinesis-source.properties
