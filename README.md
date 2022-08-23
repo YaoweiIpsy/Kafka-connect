@@ -1,7 +1,7 @@
 ### Kafka-connect
 
 #### bean 
-the models project that contains all of the classes(POJO) of models. (TODO)
+the models project that contains all the classes(POJO) of models. (TODO)
 
 #### core
 the common library for others
@@ -10,8 +10,10 @@ the common library for others
 iterable source/sink connectors. 
 
 #### kinesis
-kinesis source/sink connctors
+kinesis source/sink connectors
 
+#### lambda
+lambda source/sink connectors
 #### sample
 some examples of the source/sink connectors
 
