@@ -1,0 +1,12 @@
+dependencies {
+  api (
+      "com.fasterxml.jackson.core:jackson-core:$jackson_version",
+      "com.fasterxml.jackson.core:jackson-databind:$jackson_version",
+      "com.fasterxml.jackson.core:jackson-annotations:$jackson_version",
+      "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$jackson_version",
+      "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:$jackson_version"
+  )
+  api (
+      'jakarta.validation:jakarta.validation-api:3.0.2'
+  )
+}

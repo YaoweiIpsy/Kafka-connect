@@ -1,0 +1,8 @@
+rootProject.name = 'kafka'
+
+include 'sample'
+include 'kinesis'
+include 'core'
+include 'iterable'
+include 'lambda'
+include 'bean'
